@@ -50,3 +50,15 @@ var time7 = beforeTime.add(1, 'h')
 time7 = time7.format('hh:mm A')
 // Populates time formula into html
 $('.block7').text(time7)
+// 4:00 pm
+var time8 = beforeTime.add(1, 'h')
+// var time1 = beforeTime;
+time8 = time8.format('hh:mm A')
+// Populates time formula into html
+$('.block8').text(time8)
+// 5:00 pm
+var time9 = beforeTime.add(1, 'h')
+// var time1 = beforeTime;
+time9 = time9.format('hh:mm A')
+// Populates time formula into html
+$('.block9').text(time9)
