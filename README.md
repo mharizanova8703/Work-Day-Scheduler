@@ -9,3 +9,13 @@ https://user-images.githubusercontent.com/85656320/134960534-efa1e7bf-6090-45a0-
 
 
 ## Code snippet of a challenging  code
+```swift
+$(".saveBtn").click(function () {
+    event.preventDefault();
+    var formValue = $(this).siblings(".form-control").val();
+    console.log("This worked");
+    var listItem = $(this).parent().data("hour");
+
+    localStorage.setItem(listItem, formValue);
+});
+```
