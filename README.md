@@ -9,6 +9,17 @@ https://user-images.githubusercontent.com/85656320/134960534-efa1e7bf-6090-45a0-
 
 
 ## Code snippet of a challenging  code
+``` swift
+testTime();
+var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+for (var i = 0; i < x.length; i++) {
+    var dataHour = localStorage.getItem(x[i]);
+    // form - control
+    $(".form" + x[i]).val(dataHour);
+}
+
+```
+
 ```swift
 $(".saveBtn").click(function () {
     event.preventDefault();
