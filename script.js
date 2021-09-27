@@ -179,3 +179,11 @@ function testTime() {
         $(".form5").addClass("present");
     };
 }
+testTime();
+//using loops Through  input to get item from a local storage
+var x= [9, 10, 11, 12, 1, 2, 3, 4, 5];
+// testing loop
+for(var i=0; i < x.length; i++) {
+    dataHoar = localStorage.getItem(x[i]);
+    $(".form" +[i].values(dataHoar));
+}
