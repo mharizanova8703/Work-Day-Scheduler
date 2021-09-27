@@ -62,3 +62,48 @@ var time9 = beforeTime.add(1, 'h')
 time9 = time9.format('hh:mm A')
 // Populates time formula into html
 $('.block9').text(time9)
+
+function testTime() {
+    // Add time1 9AM
+    time1 = moment().startOf('day').add(9, "hours");
+    // Adjusts current time to the hour
+    currentTime = currentTime.startOf("hour");
+    // Add time1 if/else
+    if (currentTime.isAfter(time1)) {
+        $(".form9").addClass("past");
+    }
+    else if (currentTime.isBefore(time1)) {
+        $(".form9").addClass("future");
+    }
+    else if (currentTime.isSame(time1)) {
+        $(".form9").addClass("present");
+    };
+    //Add time 2  10 Am
+    function testTime() {
+    // Add time2 10:00AM
+    time2 = moment().startOf('day').add(10, "hours");
+    // Adjusts current time to the hour
+    currentTime = currentTime.startOf("hour");
+    // Add time2 if/else
+    if (currentTime.isAfter(time1)) {
+        $(".form10").addClass("past");
+    }
+    else if (currentTime.isBefore(time1)) {
+        $(".form10").addClass("future");
+    }
+    else if (currentTime.isSame(time1)) {
+        $(".form10").addClass("present");
+    };
+
+    // add  time3  11 Am
+    time3 = moment().startOf('day').add(11, "hours");
+    // Add time3 if/else
+    if (currentTime.isAfter(time3)) {
+        $(".form11").addClass("past");
+    }
+    else if (currentTime.isBefore(time3)) {
+        $(".form11").addClass("future");
+    }
+    else if (currentTime.isSame(time3)) {
+        $(".form11").addClass("present");
+    };
