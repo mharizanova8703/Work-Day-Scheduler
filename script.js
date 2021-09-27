@@ -32,3 +32,21 @@ var time4 = beforeTime.add(1, 'h')
 time4 = time4.format('hh:mm A')
 // Populates time formula into html
 $('.block4').text(time4)
+// 1:00 pm
+var time5 = beforeTime.add(1, 'h')
+// var time1 = beforeTime;
+time5 = time5.format('hh:mm A')
+// Populates time formula into html
+$('.block5').text(time5)
+// 2:00 pm
+var time6 = beforeTime.add(1, 'h')
+// var time1 = beforeTime;
+time6 = time6.format('hh:mm A')
+// Populates time formula into html
+$('.block6').text(time6)
+// 3:00 pm
+var time7 = beforeTime.add(1, 'h')
+// var time1 = beforeTime;
+time7 = time7.format('hh:mm A')
+// Populates time formula into html
+$('.block7').text(time7)
