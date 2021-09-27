@@ -62,7 +62,11 @@ var time9 = beforeTime.add(1, 'h')
 time9 = time9.format('hh:mm A')
 // Populates time formula into html
 $('.block9').text(time9)
+console.log(currentTime);
 
+
+// Function to compare hour slots with current time 
+// Update these to coordinating numbers
 function testTime() {
     // Add time1 9AM
     time1 = moment().startOf('day').add(9, "hours");
@@ -78,12 +82,8 @@ function testTime() {
     else if (currentTime.isSame(time1)) {
         $(".form9").addClass("present");
     };
-    //Add time 2  10 Am
-    function testTime() {
-    // Add time2 10:00AM
+    // Add time2 10AM
     time2 = moment().startOf('day').add(10, "hours");
-    // Adjusts current time to the hour
-    currentTime = currentTime.startOf("hour");
     // Add time2 if/else
     if (currentTime.isAfter(time2)) {
         $(".form10").addClass("past");
@@ -94,8 +94,7 @@ function testTime() {
     else if (currentTime.isSame(time2)) {
         $(".form10").addClass("present");
     };
-
-    // add  time3  11 Am
+    // time3 11AM
     time3 = moment().startOf('day').add(11, "hours");
     // Add time3 if/else
     if (currentTime.isAfter(time3)) {
@@ -107,18 +106,19 @@ function testTime() {
     else if (currentTime.isSame(time3)) {
         $(".form11").addClass("present");
     };
-    // add time 4 12:00Pm
-    time4 = moment().startOf("day").add(12, "hoars");
-     if (currentTime.isAfter(time4)) {
+    // time4 12PM
+    time4 = moment().startOf('day').add(12, "hours");
+    // Add time4 if/else
+    if (currentTime.isAfter(time4)) {
         $(".form12").addClass("past");
     }
     else if (currentTime.isBefore(time4)) {
-        $(".form11").addClass("future");
+        $(".form12").addClass("future");
     }
     else if (currentTime.isSame(time4)) {
         $(".form12").addClass("present");
-      };
-   // time5 1PM
+    };
+    // time5 1PM
     time5 = moment().startOf('day').add(13, "hours");
     // Add time5 if/else
     if (currentTime.isAfter(time5)) {
@@ -180,10 +180,39 @@ function testTime() {
     };
 }
 testTime();
-//using loops Through  input to get item from a local storage
-var x= [9, 10, 11, 12, 1, 2, 3, 4, 5];
-// testing loop
-for(var i=0; i < x.length; i++) {
-    dataHoar = localStorage.getItem(x[i]);
-    $(".form" +[i].values(dataHoar));
+// Loops through input area to get item from local storage
+var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+// Test loop:
+for (var i = 0; i < x.length; i++) {
+    var dataHour = localStorage.getItem(x[i]);
+    // form - control
+    $(".form" + x[i]).val(dataHour);
 }
+// Event listener to save to local stroage
+$(".saveBtn").click(function () {
+    event.preventDefault();
+    var formValue = $(this).siblings(".form-control").val();
+    console.log("This worked");
+    var listItem = $(this).parent().data("hour");
+
+    localStorage.setItem(listItem, formValue);
+});
+
+testTime();
+// Loops through input area to get item from local storage
+var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+// Test loop:
+for (var i = 0; i < x.length; i++) {
+    var dataHour = localStorage.getItem(x[i]);
+    // form - control
+    $(".form" + x[i]).val(dataHour);
+}
+// Event listener to save to local stroage
+$(".saveBtn").click(function () {
+    event.preventDefault();
+    var formValue = $(this).siblings(".form-control").val();
+    console.log("This worked");
+    var listItem = $(this).parent().data("hour");
+
+    localStorage.setItem(listItem, formValue);
+});
