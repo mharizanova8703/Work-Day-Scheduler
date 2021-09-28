@@ -1,5 +1,5 @@
 // using moment for a day and time
-moment(Date)
+moment()
 console.log(moment())
 $('#currentDay').text(moment().format('ddd MMMM Do YYYY, h:mm a'))
 //moment current time
