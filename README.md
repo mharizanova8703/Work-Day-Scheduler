@@ -1,7 +1,7 @@
 
 # Work-Day-Scheduler
 # Description 
-# This project has the following features:
+# This scheduler has the following features:
 * A header with local time that updates live
 * Seven Input Entries
 * A Save button that saves items to local storage
@@ -10,6 +10,13 @@
 * Red is on the current hour
 * Green is before the current hour
 
+## The sheduler is build with:
+  * Moment.js for local time, current time, and time conversion for individual hours
+ * Appended text to HTML for hour time
+ * If, if/else statement to compare time with the current time
+ * Appended attributes for color current time
+* An event listener for the save buttons to save to local storage
+* Bootstrap layout (responcive design )
 
 ## Screenshot
 <img width="1093" alt="Screen Shot 2021-09-27 at 2 08 23 PM" src="https://user-images.githubusercontent.com/85656320/134962283-cffce6d3-6616-46b5-bc14-7d818eb5b87f.png">
